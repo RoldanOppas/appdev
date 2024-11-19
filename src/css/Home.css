@@ -52,32 +52,32 @@
     top: 90%;
     left: 75%; 
     transform: translate(-50%, -75%); 
-    width: 80%; /* Set the width of the overlay text container */
+    width: 80%; 
     color: white; 
     text-align: center; 
     font-family: Arial, sans-serif; 
-    padding: 20px; /* Add some padding around the text */
-    z-index: 2; /* Ensures the text is above the image */
-    border-radius: 10px; /* Optional: round the corners of the overlay */
+    padding: 20px; 
+    z-index: 2;
+    border-radius: 10px; 
   }
   
   .overlay-text h1 {
-    font-size: 3rem; /* Adjust the size */
+    font-size: 3rem; 
     margin-bottom: 10px;
   }
   
   .overlay-text p {
-    font-size: 1.5rem; /* Adjust the size */
+    font-size: 1.5rem; 
   }
   
-  /* Enroll button style */
+  
   .enroll-button{
     background-color: #0b6d40;
     color: white;
     padding: 1vw;
     font-size: 1vw;
     border-radius: 5px;
-    margin-top: 10px; /* Optional: space between the text and button */
+    margin-top: 10px; 
   }
 
   .enroll-button:hover{
@@ -88,4 +88,28 @@
   body{
     padding: 2vw;
   }
+
+  
+.background-content {
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+  }
+  
+
+  .background-image {
+    width: 30vw; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 8px; /* Optional: Add rounded corners */
+  }
+  
+  /* Paragraph styling */
+  .background-content p {
+    font-size: 1rem; /* Adjust font size */
+    line-height: 1.6; /* Add line height for readability */
+    max-width: 600px; /* Limit the paragraph width for better readability */
+  }
+  
   
