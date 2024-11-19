@@ -1,5 +1,6 @@
 // ApplyNow.jsx
 import React from 'react';
+import '../css/ApplyNow.css';
 
 const ApplyNow = () => {
   const handleSubmit = (e) => {

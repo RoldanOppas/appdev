@@ -1,35 +1,37 @@
 // Home.jsx
 import React from 'react';
-import "./css/Home.css";
+import '../css/Home.css';
+import cover from '../assets/cover photo.jpg'; // Make sure the path is correct
+import {Link} from 'react-router-dom';
 
 const Home = () => {
   return (
 
     <div className="home">
-      <section className="hero">
+      {/*<section className="hero">
         <h1>Welcome to Pines Montessori School</h1>
         <p className="location">#32 Gibraltar, Baguio City</p>
-      </section>
+  </section>*/}
 
       <div className="cover-container">
         <img src={cover} alt="Cover" className="cover-photo" />
         <div className="overlay-text">
           <h1>Pines Montessori School</h1>
-          <p></p>
-          <Link to="/Application"><button className="enroll-button">Enroll Now!</button></Link>
+          <p>"Where school is truly where the heart is"</p>
+          <Link to="/ApplyNow"><button className="enroll-button">Enroll Now!</button></Link>
         </div>
       </div>
 
+    <body>
       <section className="background">
         <h2>Background Information</h2>
         <p>
-          Pines Montessori School is dedicated to providing quality education 
-          through our comprehensive educational programs. Our institution 
-          values transparency and accessibility, ensuring that all information
-          about our school is readily available to our community.
+          Pines Montessori School located on #32 Gibraltar Road, Baguio City, an English oriented institution focusing on inclusivity and union of students. Encouraging a montessorial approach that teaches students independence and self-learning with the assistance of the instructors of the institution.
         </p>
       </section>
-
+      <br />
+      <br />
+      
       <section className="objectives">
         <h2>Our Objectives</h2>
         <div className="objectives-grid">
@@ -54,6 +56,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+    </body>
+      
     </div>
   );
 };

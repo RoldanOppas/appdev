@@ -1,0 +1,91 @@
+.hero {
+    background: linear-gradient(rgba(11, 109, 64, 0.9), rgba(119, 187, 149, 0.8));
+    color: var(--white);
+    padding: 4rem 5%;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+  }
+  
+  .objective-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .objective-card:hover {
+    transform: translateY(-5px);
+  }
+
+
+.cover-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjust as per your need */
+    overflow: hidden;
+    margin: auto;
+    
+  }
+  
+  
+  .cover-photo {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    display: block; 
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 90%;
+    left: 75%; 
+    transform: translate(-50%, -75%); 
+    width: 80%; /* Set the width of the overlay text container */
+    color: white; 
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+    padding: 20px; /* Add some padding around the text */
+    z-index: 2; /* Ensures the text is above the image */
+    border-radius: 10px; /* Optional: round the corners of the overlay */
+  }
+  
+  .overlay-text h1 {
+    font-size: 3rem; /* Adjust the size */
+    margin-bottom: 10px;
+  }
+  
+  .overlay-text p {
+    font-size: 1.5rem; /* Adjust the size */
+  }
+  
+  /* Enroll button style */
+  .enroll-button{
+    background-color: #0b6d40;
+    color: white;
+    padding: 1vw;
+    font-size: 1vw;
+    border-radius: 5px;
+    margin-top: 10px; /* Optional: space between the text and button */
+  }
+
+  .enroll-button:hover{
+    background-color: var(--secondary-green);
+  color: var(--white);
+  }
+
+  body{
+    padding: 2vw;
+  }
+  

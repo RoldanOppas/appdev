@@ -1,5 +1,6 @@
 // Activities.jsx
 import React from 'react';
+import '../css/Activities.css';
 
 const Activities = () => {
   return (
