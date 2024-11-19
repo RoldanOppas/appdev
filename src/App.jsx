@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import logo from './assets/logo.png';
+import Home from './Home'; // Import Home component
+import Activities from './Activities'; // Import Activities component
+import Apply from './ApplyNow.jsx'; // Import Apply component
+import Contacts from './Contacts'; // Import Contacts component
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <div className="app">
+        <header className="header">
+          <div className="logo-container">
+            <img src={logo} alt="Pines Montessori School Logo" className="logo" />
+          </div>
+          <nav className="nav-links">
+            <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
+              Home
+            </NavLink>
+            <NavLink to="/activities" className={({ isActive }) => isActive ? 'active' : ''}>
+              Activities and Services
+            </NavLink>
+            <NavLink to="/apply" className={({ isActive }) => isActive ? 'active' : ''}>
+              Apply Now!
+            </NavLink>
+            <NavLink to="/contacts" className={({ isActive }) => isActive ? 'active' : ''}>
+              Contacts
+            </NavLink>
+          </nav>
+        </header>
 
-export default App
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/activities" element={<Activities />} />
+          <Route path="/apply" element={<Apply />} />
+          <Route path="/contacts" element={<Contacts />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+};
+
+export default App;
