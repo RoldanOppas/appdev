@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import logo from './assets/logo.png';
-import Home from './Home'; // Import Home component
-import Activities from './Activities'; // Import Activities component
-import Apply from './ApplyNow.jsx'; // Import Apply component
-import Contacts from './Contacts'; // Import Contacts component
+import Home from './pages/Home.jsx'; 
+import Activities from './pages/Activities';  // Corrected import
+import Apply from './pages/ApplyNow.jsx';
+import Contacts from './pages/Contacts';  // Corrected import
 
 const App = () => {
   return (
