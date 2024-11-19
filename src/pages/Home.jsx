@@ -1,13 +1,24 @@
 // Home.jsx
 import React from 'react';
+import "./css/Home.css";
 
 const Home = () => {
   return (
+
     <div className="home">
       <section className="hero">
         <h1>Welcome to Pines Montessori School</h1>
         <p className="location">#32 Gibraltar, Baguio City</p>
       </section>
+
+      <div className="cover-container">
+        <img src={cover} alt="Cover" className="cover-photo" />
+        <div className="overlay-text">
+          <h1>Pines Montessori School</h1>
+          <p></p>
+          <Link to="/Application"><button className="enroll-button">Enroll Now!</button></Link>
+        </div>
+      </div>
 
       <section className="background">
         <h2>Background Information</h2>
