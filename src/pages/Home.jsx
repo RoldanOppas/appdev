@@ -3,7 +3,7 @@ import React from 'react';
 import '../css/Home.css';
 import cover from '../assets/cover photo.jpg'; 
 import {Link} from 'react-router-dom';
-import img from '../assets/cover image.jpg';
+import img from '../assets/vision.jpg';
 
 const Home = () => {
   return (
@@ -26,12 +26,14 @@ const Home = () => {
     <body>
     <section className="background">
       
+
+
       <div className="background-content">
         <img src={img} alt="School Building" className="background-image" />
         <p>
-          <h2>Background Information</h2>
+          <h2>Vision</h2>
           <br />
-          Pines Montessori School, located at #32 Gibraltar Road, Baguio City, is an English-oriented institution focusing on inclusivity and union of students. It encourages a Montessori approach that teaches students independence and self-learning with the assistance of the instructors of the institution.
+          An outstanding progressive school dedicated to providing balanced quality education through innovative learning principles and methodology, that all students are prepared and motivated to perform with their highest potential, productive in all areas, molded and primed in the changing of time, and confident to belong in a diverse community and global society.
         </p>
       </div>
     </section>
