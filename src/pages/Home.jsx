@@ -41,7 +41,7 @@ const Home = () => {
     </section>
   
   
-    
+    <hr />
     <div className="mission-statement">
       <center><h2>Mission Statement</h2></center>
       {/* Tab Buttons */}
@@ -78,12 +78,13 @@ const Home = () => {
           An outstanding progressive school dedicated to providing balanced quality education through innovative learning principles and methodology, that all students are prepared and motivated to perform with their highest potential, productive in all areas, molded and primed in the changing of time, and confident to belong in a diverse community and global society.</div>}
         {activeTab === "tab2" && <div>
           A devoted school committed to developing and training every student in their God-given talents and potentials, through values and quality learning, enhancing their knowledge and wisdom, guided and cultivated through the fundamentals of this institution, faith, hope, love, and respect, to scaffold their social growth, that every student is committed, competent, confident, able to communicate, capable for advancement, and inspiring them of their bright and better future. </div>}
-        {activeTab === "tab3" && <div>Content for Tab 3</div>}
-        {activeTab === "tab4" && <div>Content for Tab 4</div>}
+        {activeTab === "tab3" && <div>
+          That all students may have a positive and memorable learning experience, achieved academic excellence, be equipped, and be able to demonstrate their talents and skills, display exemplary performance in all areas of improvement, with good values, good manners, and right conduct, prepared, and are commendable for their next level of education.</div>}
+        {activeTab === "tab4" && <div>Pines Montessori School aims to ensure that the vision, mission, and core values are the cornerstones of all the school programs, activities, and practices. Its principles are reflected in all the teaching and learning processes, that is applied both internally and externally. Regular evaluation is an important part that motivates and develops all performances toward our goal and every progress, that meets the standards and high expectations of all, where learning is a continuous process in life.</div>}
 
       </div>
     </div>
-
+          <hr />
       <br />
       <br />
 
