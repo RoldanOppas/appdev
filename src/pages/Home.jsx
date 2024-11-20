@@ -146,13 +146,13 @@ const Home = () => {
           <div className="objective-card">
             <h3>Enrollment</h3>
             <p>Streamlined enrollment process with the necessary information of the student.</p>
-            <Link to="/ApplyNow"><button className="enroll-button">See Enrollment</button></Link>
+            <Link to="/apply"><button className="enroll-button">See Enrollment</button></Link>
           </div>
 
           <div className="objective-card">
             <h3>Job Application</h3>
             <p>Job hirings and streamlined job application procedures with the necessary information of the applicant.</p>
-            <Link to="/ApplyNow"><button className="enroll-button">See Application</button></Link>
+            <Link to="/apply"><button className="enroll-button">See Application</button></Link>
           </div>
 
           <div className="objective-card">
