@@ -9,6 +9,8 @@ const Contacts = () => {
     message: ''
   });
 
+  const [result, setResult] = useState(''); // Define result state
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -16,16 +18,33 @@ const Contacts = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission (e.g., send an email, log data, etc.)
-    console.log('Form submitted:', formData);
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending...."); // Update the result message
+    const formDataToSubmit = new FormData(event.target);
+    
+    formDataToSubmit.append("access_key", "8003edb3-6526-4019-8e6f-c192f966592f");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formDataToSubmit
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message || "Something went wrong.");
+    }
   };
 
   return (
     <div className="contacts">
       <h1>Contact Us</h1>
-      <p>We'd love to hear from you! Whether you have questions, feedback, or need more information about our services and programs, our team is here to assist you.</p>
+      {/*<p>We'd love to hear from you! Whether you have questions, feedback, or need more information about our services and programs, our team is here to assist you.</p>*/}
 
       <div className="contacts-container">
         <section className="contact-info">
@@ -39,31 +58,34 @@ const Contacts = () => {
 
           <div className="info-item">
             <h3>Contact Numbers</h3>
-            {/* Add actual phone numbers */}
-            <p>Tel: (074) XXX-XXXX</p>
-            <p>Mobile: +63 XXX XXX XXXX</p>
+            <i class="bi bi-telephone-fill"></i> Tel: (074) 246 0403 <br></br>
+            <i class="bi bi-phone"></i> Mobile: +63 XXX XXX <br></br><br></br>
           </div>
 
           <div className="info-item">
             <h3>Email</h3>
-            {/* Add actual email */}
-            <p>info@pinesmontessori.edu.ph</p>
+            <p><i class="bi bi-envelope"></i> pines.montessori@gmail.com</p>
           </div>
 
           <div className="info-item">
             <h3>Social Media</h3>
             <div className="social-links">
-              {/* Add actual social media links */}
-              <a href="#" className="social-link">Facebook</a>
-              <a href="#" className="social-link">Instagram</a>
-              <a href="#" className="social-link">Twitter</a>
+            <a href="https://www.facebook.com/pinesmontessorischoolinc" className="social-link" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-facebook"></i> Facebook
+            </a><br></br>
+            <a href="https://www.instagram.com" className="social-link" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-instagram"></i> Instagram
+            </a><br></br>
+            <a href="https://www.twitter.com" className="social-link" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-twitter-x"></i> Twitter
+            </a>
             </div>
           </div>
         </section>
 
         <section className="contact-form">
           <h2>Send us a Message</h2>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={onSubmit}>
             <div className="form-group">
               <label htmlFor="name">Full Name</label>
               <input
@@ -97,7 +119,7 @@ const Contacts = () => {
                 onChange={handleChange}
                 required
               >
-                <option value="" disabled selected>Select Subject</option>
+                <option value="" disabled>Select Subject</option>
                 <option value="Enrollment">Enrollment</option>
                 <option value="Job Application">Job Application</option>
                 <option value="General Inquiry">General Inquiry</option>
@@ -120,12 +142,12 @@ const Contacts = () => {
 
             <button type="submit" className="submit-btn">Send Message</button>
           </form>
+          {result && <p className="result-message">{result}</p>} {/* Display result message */}
         </section>
 
         <section className="map">
           <h2>Location Map</h2>
           <div className="map-container">
-            {/* Google Map Embed */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.171365816038!2d120.61721287579704!3d16.416120930056664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3391a154cd66671d%3A0xb203876f75062d46!2sPines%20Montessori%20School!5e0!3m2!1sen!2sph!4v1731982120610!5m2!1sen!2sph"
               width="600"
