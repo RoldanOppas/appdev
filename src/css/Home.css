@@ -111,5 +111,43 @@
     line-height: 1.6; /* Add line height for readability */
     max-width: 60%; /* Limit the paragraph width for better readability */
   }
+
+  .tab-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+  
+  .tab-buttons button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .tab-buttons button.active {
+    background-color: #0b6d40;
+    color: #fff;
+    border-color: #0b6d40;
+  }
+  
+  .tab-buttons button:hover:not(.active) {
+    background-color: #eaeaea;
+  }
+  
+  .tab-content {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .mission-statement{
+    margin-top: 5%;
+  }
+  
   
   
