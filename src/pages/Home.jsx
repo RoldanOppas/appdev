@@ -28,7 +28,7 @@ const Home = () => {
         <img src={cover} alt="Cover" className="cover-photo" />
         <div className="overlay-text">
           <h1>Pines Montessori School</h1>
-          <p>"Where school is truly where the heart is"</p>
+          <p>"We belong together in this school"</p>
           <Link to="/ApplyNow"><button className="enroll-button">Enroll Now!</button></Link>
         </div>
       </div>
@@ -133,7 +133,6 @@ const Home = () => {
           <hr />
       <br />
       <br />
-
       <section className="objectives">
         <center><h2>What Pines Montessori School Offers</h2></center>
         <div className="objectives-grid">
