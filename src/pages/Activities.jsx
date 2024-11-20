@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/Activities.css';
 import { Carousel } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import preschool from '../assets/preschool.jpg';
 import kinder from '../assets/kinder.jpg';
@@ -111,6 +113,8 @@ const Activities = () => {
             <p>&bull; Must be 4 years old as of August 31 of the current school year.</p>
             <p>&bull; Must meet academic readiness and other skills with interview.</p>
             <p>&bull; Must be toilet-trained.</p>
+            <Link to="/apply"><button className="enroll-button">Enroll Now!</button></Link>
+
           </div>
         </div>
         <hr />
@@ -124,6 +128,8 @@ const Activities = () => {
             <p>&bull; Must be 5 years old before August 31 of the current school year.</p>
             <p>&bull; Must meet academic readiness and other skills with interview.</p>
             <p>&bull; Must be toilet-trained.</p>
+            <Link to="/apply"><button className="enroll-button">Enroll Now!</button></Link>
+
           </div>
         </div>
         <hr />
@@ -141,6 +147,8 @@ const Activities = () => {
             <p>&bull; Enrollment fee (Miscellaneous fee and Down payment).</p>
             <p>&bull; Must undergo the Intake interview.</p>
             <p>&bull; Must attend with his or her parent/s legal guardian the orientation scheduled by the school upon enrollment.</p>
+            <Link to="/apply"><button className="enroll-button">Enroll Now!</button></Link>
+
           </div>
         </div>
         <hr />
@@ -158,6 +166,8 @@ const Activities = () => {
             <p>&bull; Enrollment fee (Miscellaneous fee and Down payment).</p>
             <p>&bull; Must undergo the Intake interview.</p>
             <p>&bull; Must attend with his or her parent/s legal guardian the orientation scheduled by the school upon enrollment.</p>
+            <Link to="/apply"><button className="enroll-button">Enroll Now!</button></Link>
+
           </div>
         </div>
         <hr />
@@ -177,6 +187,8 @@ const Activities = () => {
             <p>&bull; Student Passport</p>
             <p>&bull; Photocopy of Parent's/Guardian's passport</p>
             <p>&bull; Special Study Permission (SSP) or photocopy of Alien Certificate of Registration (ACR), and I-Card from the Bureau of Immigration.</p>
+            <Link to="/apply"><button className="enroll-button">Enroll Now!</button></Link>
+
           </div>
         </div>
         <hr />
@@ -194,6 +206,8 @@ const Activities = () => {
             <p>&bull; Enrollment fee (Miscellaneous fee and Down payment).</p>
             <p>&bull; Must undergo the Intake interview.</p>
             <p>&bull; Must attend with his or her parent/s legal guardian the orientation scheduled by the school upon enrollment.</p>
+            <Link to="/apply"><button className="enroll-button">Enroll Now!</button></Link>
+
           </div>
         </div>
         <hr />

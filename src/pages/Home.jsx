@@ -29,7 +29,7 @@ const Home = () => {
         <div className="overlay-text">
           <h1>Pines Montessori School</h1>
           <p>"We belong together in this school"</p>
-          <Link to="/ApplyNow"><button className="enroll-button">Enroll Now!</button></Link>
+          <Link to="/apply"><button className="enroll-button">Enroll Now!</button></Link>
         </div>
       </div>
 

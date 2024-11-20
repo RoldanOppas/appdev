@@ -73,8 +73,8 @@
 }
 
 .program-image {
-  width: 600px; 
-  height: 750px; 
+  width: 40%; 
+  height: auto; 
   margin: 0; 
   overflow: hidden; 
   position: relative; 
@@ -89,7 +89,7 @@
 
 .program-info {
   flex: 2; 
-  padding: 10px;
+  padding: 7%;
   background: linear-gradient(to right,rgba(158, 219, 107, 0.4), rgba(183, 215, 152, 0.4), rgba(197, 226, 161,0.4));
 }
 
@@ -103,7 +103,7 @@
 
 .program-info-alternate {
   flex: 2; 
-  padding: 20px;
+  padding: 7%;
   background: linear-gradient(to left,rgba(158, 219, 107, 0.4), rgba(183, 215, 152, 0.4), rgba(197, 226, 161,0.4)); 
 }
 
@@ -117,6 +117,12 @@
 
 .program-details.alternate {
   flex-direction: row-reverse; 
+}
+
+.program-info button, .program-info-alternate button{
+  float: right;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 hr {
@@ -207,4 +213,6 @@ hr {
   font-size: 1rem;
   color: #555;
 }
+
+
 
