@@ -126,6 +126,7 @@
     background-color: #f9f9f9;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    width: 24%;
   }
   
   .tab-buttons button.active {
@@ -135,7 +136,8 @@
   }
   
   .tab-buttons button:hover:not(.active) {
-    background-color: #eaeaea;
+    background-color: #51a375;
+    color: white;
   }
   
   .tab-content {
@@ -148,6 +150,20 @@
   
   .mission-statement{
     margin-top: 5%;
+  }
+
+  .tab-symbol{
+    height: 40px;
+    width: auto;
+  }
+
+button i{
+    font-size: 2rem;
+  }
+
+  .tab-image{
+    width: 30%;
+    height: auto;
   }
   
   
