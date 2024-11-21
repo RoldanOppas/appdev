@@ -7,16 +7,21 @@ import Contacts from './pages/Contacts';  // Corrected import
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css'
 
-
 const App = () => {
   return (
     <>
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Serif+KR:wght@200..900&family=Pirata+One&display=swap');        `}
+        </style>
     <Router>
       <div className="app">
         <header className="header">
           <div className="logo-container">
             <img src={logo} alt="Pines Montessori School Logo" className="logo" />
-            <h1>Pines Montessori School</h1>
+            <h1 style={{ fontFamily: 'Noto Serif KR, serif ' }}>
+              Pines Montessori School
+            </h1>
           </div>
           <nav className="nav-links">
             <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
