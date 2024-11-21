@@ -1,3 +1,8 @@
+h2 {
+  font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+}
+
 .contacts-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
