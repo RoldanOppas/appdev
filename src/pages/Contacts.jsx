@@ -47,41 +47,7 @@ const Contacts = () => {
       {/*<p>We'd love to hear from you! Whether you have questions, feedback, or need more information about our services and programs, our team is here to assist you.</p>*/}
 
       <div className="contacts-container">
-        <section className="contact-info">
-          <h2>Get in Touch</h2>
-          <p>If you have any questions, concerns, or inquiries, please don't hesitate to contact us. Fill out the form below and our team will get back to you as soon as possible.</p>
-          
-          <div className="info-item">
-            <h3>Address</h3>
-            <p>#32 Gibraltar, Baguio City</p>
-          </div>
-
-          <div className="info-item">
-            <h3>Contact Numbers</h3>
-            <i class="bi bi-telephone-fill"></i> Tel: (074) 246 0403 <br></br>
-            <i class="bi bi-phone"></i> Mobile: +63 XXX XXX <br></br><br></br>
-          </div>
-
-          <div className="info-item">
-            <h3>Email</h3>
-            <p><i class="bi bi-envelope"></i> pines.montessori@gmail.com</p>
-          </div>
-
-          <div className="info-item">
-            <h3>Social Media</h3>
-            <div className="social-links">
-            <a href="https://www.facebook.com/pinesmontessorischoolinc" className="social-link" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-facebook"></i> Facebook
-            </a><br></br>
-            <a href="https://www.instagram.com" className="social-link" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-instagram"></i> Instagram
-            </a><br></br>
-            <a href="https://www.twitter.com" className="social-link" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-twitter-x"></i> Twitter
-            </a>
-            </div>
-          </div>
-        </section>
+        
 
         <section className="contact-form">
           <h2>Send us a Message</h2>
