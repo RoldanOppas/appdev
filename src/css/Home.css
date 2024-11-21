@@ -85,9 +85,7 @@
   color: var(--white);
   }
 
-  body{
-    padding: 2vw;
-  }
+ 
 
   
 .background-content {
@@ -95,6 +93,7 @@
     align-items: center; 
     gap: 20px; 
     flex-wrap: wrap; 
+    padding: 1%;
   }
   
 

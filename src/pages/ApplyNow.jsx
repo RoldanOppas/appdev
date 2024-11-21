@@ -10,7 +10,7 @@ const ApplyNow = () => {
 
   return (
     <div className="apply">
-      <h1>Apply Now!</h1>
+      <center><h1>Apply Now!</h1></center>
 
       <div className="application-types">
         <section className="student-enrollment">

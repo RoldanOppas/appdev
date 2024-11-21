@@ -119,6 +119,11 @@
   flex-direction: row-reverse; 
 }
 
+.program-info, .program-info-alternate{
+  line-height: 40px;
+  text-align: left;
+}
+
 .program-info button, .program-info-alternate button{
   float: right;
   font-weight: bold;

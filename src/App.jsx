@@ -76,23 +76,8 @@ const App = () => {
             <i className="bi bi-facebook"></i> Facebook
           </a>
           <br />
-          <a
-            href="https://www.instagram.com"
-            className="social-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="bi bi-instagram"></i> Instagram
-          </a>
-          <br />
-          <a
-            href="https://www.twitter.com"
-            className="social-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="bi bi-twitter"></i> Twitter
-          </a>
+          
+          
         </div>
       </div>
     </div>
