@@ -113,7 +113,7 @@ const Activities = () => {
             <p>&bull; Must be 4 years old as of August 31 of the current school year.</p>
             <p>&bull; Must meet academic readiness and other skills with interview.</p>
             <p>&bull; Must be toilet-trained.</p>
-            <Link to="/apply"><button className="enroll-button">Enroll Now!</button></Link>
+            <Link to="/apply/preschool"><button className="enroll-button">Enroll Now!</button></Link>
           </div>
         </div>
         <hr />
@@ -127,7 +127,7 @@ const Activities = () => {
             <p>&bull; Must be 5 years old before August 31 of the current school year.</p>
             <p>&bull; Must meet academic readiness and other skills with interview.</p>
             <p>&bull; Must be toilet-trained.</p>
-            <Link to="/apply"><button className="enroll-button">Enroll Now!</button></Link>
+            <Link to="/apply/kindergarten"><button className="enroll-button">Enroll Now!</button></Link>
 
           </div>
         </div>
@@ -146,7 +146,7 @@ const Activities = () => {
             <p>&bull; Enrollment fee (Miscellaneous fee and Down payment).</p>
             <p>&bull; Must undergo the Intake interview.</p>
             <p>&bull; Must attend with his or her parent/s legal guardian the orientation scheduled by the school upon enrollment.</p>
-            <Link to="/apply"><button className="enroll-button">Enroll Now!</button></Link>
+            <Link to="/apply/elementary"><button className="enroll-button">Enroll Now!</button></Link>
 
           </div>
         </div>
@@ -165,7 +165,7 @@ const Activities = () => {
             <p>&bull; Enrollment fee (Miscellaneous fee and Down payment).</p>
             <p>&bull; Must undergo the Intake interview.</p>
             <p>&bull; Must attend with his or her parent/s legal guardian the orientation scheduled by the school upon enrollment.</p>
-            <Link to="/apply"><button className="enroll-button">Enroll Now!</button></Link>
+            <Link to="/apply/highschool"><button className="enroll-button">Enroll Now!</button></Link>
 
           </div>
         </div>

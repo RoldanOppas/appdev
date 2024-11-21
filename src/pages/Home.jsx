@@ -163,7 +163,7 @@ const Home = () => {
           <div className="objective-card">
             <h3>Job Application</h3>
             <p>Job hirings and streamlined job application procedures with the necessary information of the applicant.</p>
-            <Link to="/apply"><button className="enroll-button">See Application</button></Link>
+            <Link to="/apply/job"><button className="enroll-button">See Application</button></Link>
           </div>
 
           <div className="objective-card">
