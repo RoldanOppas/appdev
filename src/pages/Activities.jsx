@@ -1,8 +1,7 @@
 import React from 'react';
 import '../css/Activities.css';
 import { Carousel } from 'react-bootstrap';
-import {Link} from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import preschool from '../assets/preschool.jpg';
 import kinder from '../assets/kinder.jpg';
@@ -18,7 +17,7 @@ const Activities = () => {
   return (
     <div className="activities">
       <h1>Activities and Services</h1>
-      
+
       <section className="programs">
         <h2>Educational Programs</h2>
         <div className="programs-content">
@@ -29,9 +28,9 @@ const Activities = () => {
                 src={preschool}
                 alt="Preschool Program"
               />
-              <Carousel.Caption>
+              <Carousel.Caption className="carousel-caption">
                 <a href="#preschool">
-                  <p>Preschool Program</p>
+                  <button className="caption-button">Preschool Program</button>
                 </a>
               </Carousel.Caption>
             </Carousel.Item>
@@ -42,9 +41,9 @@ const Activities = () => {
                 src={kinder}
                 alt="Kindergarten Program"
               />
-              <Carousel.Caption>
+              <Carousel.Caption className="carousel-caption">
                 <a href="#kinder">
-                  <p>Kindergarten Program</p>
+                  <button className="caption-button">Kindergarten Program</button>
                 </a>
               </Carousel.Caption>
             </Carousel.Item>
@@ -55,9 +54,9 @@ const Activities = () => {
                 src={primary}
                 alt="Elementary Program"
               />
-              <Carousel.Caption>
+              <Carousel.Caption className="carousel-caption">
                 <a href="#primary">
-                  <p>Elementary Program</p>
+                  <button className="caption-button">Elementary Program</button>
                 </a>
               </Carousel.Caption>
             </Carousel.Item>
@@ -68,9 +67,9 @@ const Activities = () => {
                 src={jhs}
                 alt="Junior High School Program"
               />
-              <Carousel.Caption>
+              <Carousel.Caption className="carousel-caption">
                 <a href="#jhs">
-                  <p>Junior High School Program</p>
+                  <button className="caption-button">Junior High School Program</button>
                 </a>
               </Carousel.Caption>
             </Carousel.Item>
@@ -81,9 +80,9 @@ const Activities = () => {
                 src={homeschool}
                 alt="Homeschooling Program"
               />
-              <Carousel.Caption>
+              <Carousel.Caption className="carousel-caption">
                 <a href="#homeschool">
-                  <p>Homeschooling Program</p>
+                  <button className="caption-button">Home Schooling Program</button>
                 </a>
               </Carousel.Caption>
             </Carousel.Item>
@@ -94,11 +93,12 @@ const Activities = () => {
                 src={esl}
                 alt="English Proficiency Program"
               />
-              <Carousel.Caption>
+              <Carousel.Caption className="carousel-caption">
                 <a href="#esl">
-                  <p>English Proficiency Program</p>
+                  <button className="caption-button">English Language Proficiency Program</button>
                 </a>
               </Carousel.Caption>
+
             </Carousel.Item>
           </Carousel>
         </div>
@@ -114,7 +114,6 @@ const Activities = () => {
             <p>&bull; Must meet academic readiness and other skills with interview.</p>
             <p>&bull; Must be toilet-trained.</p>
             <Link to="/apply"><button className="enroll-button">Enroll Now!</button></Link>
-
           </div>
         </div>
         <hr />
@@ -284,7 +283,7 @@ const Activities = () => {
       </section>
 
       <section className="services">
-      <h2>Available Services</h2>
+        <h2>Available Services</h2>
         <div className="services-grid">
           {/* Service Card 1: Tutoring */}
           <div className="service-card">

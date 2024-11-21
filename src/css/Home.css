@@ -70,7 +70,6 @@
     font-size: 1.5rem; 
   }
   
-  
   .enroll-button{
     background-color: #0b6d40;
     color: white;
@@ -85,9 +84,6 @@
   color: var(--white);
   }
 
- 
-
-  
 .background-content {
     display: flex; 
     align-items: center; 
@@ -95,20 +91,19 @@
     flex-wrap: wrap; 
     padding: 1%;
   }
-  
 
   .background-image {
     width: 30vw; 
     height: auto; 
     object-fit: cover; 
-    border-radius: 8px; /* Optional: Add rounded corners */
+    border-radius: 8px; 
   }
   
   /* Paragraph styling */
   .background-content p {
-    font-size: 1rem; /* Adjust font size */
-    line-height: 1.6; /* Add line height for readability */
-    max-width: 60%; /* Limit the paragraph width for better readability */
+    font-size: 1rem; 
+    line-height: 1.6; 
+    max-width: 60%; 
   }
 
   .tab-buttons {
