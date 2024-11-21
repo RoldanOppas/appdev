@@ -12,8 +12,12 @@ const App = () => {
     <>
       <style>
         {`
-          @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Serif+KR:wght@200..900&family=Pirata+One&display=swap');        `}
-        </style>
+          @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Serif+KR:wght@200..900&family=Pirata+One&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Great+Vibes&family=Noto+Serif+KR:wght@200..900&family=Pirata+One&display=swap');
+
+        `}
+
+      </style>
     <Router>
       <div className="app">
         <header className="header">
