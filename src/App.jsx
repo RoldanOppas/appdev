@@ -14,50 +14,33 @@ const App = () => {
   return (
     <>
       <style>
-        {`@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Serif+KR:wght@200..900&family=Pirata+One&display=swap');`}
-      </style>
-      <Router>
-        <div className="app">
-          <header className="header">
-            <div className="logo-container">
-              <img src={logo} alt="Pines Montessori School Logo" className="logo" />
-              <h1 style={{ fontFamily: 'Noto Serif KR, serif ' }}>
-                Pines Montessori School
-              </h1>
-            </div>
-            <nav className="nav-links">
-              <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
-                Home
-              </NavLink>
-              <NavLink to="/activities" className={({ isActive }) => isActive ? 'active' : ''}>
-                Activities and Services
-              </NavLink>
-              <div 
-                className="submenu-container"
-                onMouseEnter={() => setShowApplySubmenu(true)}
-                onMouseLeave={() => setShowApplySubmenu(false)}
-              >
-                <NavLink 
-                  to="/apply" 
-                  className={({ isActive }) => isActive ? 'active' : ''}
-                >
-                  Apply Now! ▼
-                </NavLink>
-                {showApplySubmenu && (
-                  <div className="submenu">
-                    <NavLink to="/apply/preschool">Pre-school</NavLink>
-                    <NavLink to="/apply/kindergarten">Kindergarten</NavLink>
-                    <NavLink to="/apply/elementary">Elementary</NavLink>
-                    <NavLink to="/apply/highschool">High School</NavLink>
-                    <NavLink to="/apply/job">Job Application</NavLink>
-                  </div>
-                )}
-              </div>
-              <NavLink to="/contacts" className={({ isActive }) => isActive ? 'active' : ''}>
-                Contacts
-              </NavLink>
-            </nav>
-          </header>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Serif+KR:wght@200..900&family=Pirata+One&display=swap');        `}
+        </style>
+    <Router>
+      <div className="app">
+        <header className="header">
+          <div className="logo-container">
+            <img src={logo} alt="Pines Montessori School Logo" className="logo" />
+            <h1 style={{ fontFamily: 'Noto Serif KR, serif ' }}>
+              Pines Montessori School
+            </h1>
+          </div>
+          <nav className="nav-links">
+            <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
+              Home
+            </NavLink>
+            <NavLink to="/activities" className={({ isActive }) => isActive ? 'active' : ''}>
+              Activities and Services
+            </NavLink>
+            <NavLink to="/apply" className={({ isActive }) => isActive ? 'active' : ''}>
+              Apply Now!
+            </NavLink>
+            <NavLink to="/contacts" className={({ isActive }) => isActive ? 'active' : ''}>
+              Contacts
+            </NavLink>
+          </nav>
+        </header>
 
           <Routes>
             <Route path="/" element={<Home />} />
