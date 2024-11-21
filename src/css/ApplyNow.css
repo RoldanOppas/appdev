@@ -1,14 +1,190 @@
-.application-types {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 5%;
+/* General Container */
+.apply-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Form Design */
+.enrollment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+h2 {
+  color: var(--primary-green);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.description {
+  color: var(--teal);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.requirements {
+  background-color: var(--light-blue);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.requirements li {
+  margin-bottom: 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--teal);
+}
+
+input {
+  padding: 0.8rem;
+  border: 1px solid var(--light-blue);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 5px rgba(11, 109, 64, 0.5);
+}
+
+.submit-btn {
+  background-color: var(--primary-green);
+  color: var(--white);
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-green);
+}
+
+/* Placeholder for Job Application */
+.placeholder {
+  text-align: center;
+}
+
+.placeholder .description {
+  font-style: italic;
+  color: var(--teal);
+}
+
+/* Enhanced Requirements Section */
+.requirements-section {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  border: 2px solid var(--light-blue);
+}
+
+.requirements-section h3 {
+  color: var(--primary-green);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.requirements-section h3::before,
+.requirements-section h3::after {
+  content: '';
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--primary-green);
+  margin: 0 15px;
+}
+
+.requirements-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.requirement-card {
+  background-color: var(--light-blue);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.requirement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.requirement-icon {
+  background-color: var(--primary-green);
+  color: var(--white);
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.requirement-text {
+  flex-grow: 1;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .requirements-wrapper {
+    grid-template-columns: 1fr;
   }
-  
-  .student-enrollment,
-  .job-application {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .apply-container {
+    padding: 1rem;
   }
+
+  .requirements {
+    font-size: 0.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}
