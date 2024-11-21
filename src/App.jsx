@@ -16,6 +16,7 @@ const App = () => {
         <header className="header">
           <div className="logo-container">
             <img src={logo} alt="Pines Montessori School Logo" className="logo" />
+            <h1>Pines Montessori School</h1>
           </div>
           <nav className="nav-links">
             <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
