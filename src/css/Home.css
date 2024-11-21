@@ -106,21 +106,32 @@
     max-width: 60%; 
   }
 
+
+  .mission-statement {
+    padding: 1rem;
+  }
+  
+  .mission-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
   .tab-buttons {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 1rem;
+    flex-direction: column; /* Make buttons stack vertically */
+    gap: 1rem;
+    width: 200px; /* Fixed width for the tab buttons */
   }
   
   .tab-buttons button {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     font-size: 1rem;
     cursor: pointer;
     border: 1px solid #ddd;
     background-color: #f9f9f9;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    width: 24%;
   }
   
   .tab-buttons button.active {
@@ -135,30 +146,40 @@
   }
   
   .tab-content {
-    padding: 1rem;
+    flex: 1; /* Take up the remaining space */
+    padding: 1.5rem;
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #fff;
     line-height: 30px;
   }
   
-  .mission-statement{
-    margin-top: 5%;
+  
+  .tab-background-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
   }
-
-  .tab-symbol{
-    height: 40px;
-    width: auto;
-  }
-
-button i{
-    font-size: 2rem;
-  }
-
-  .tab-image{
-    width: 30%;
+  
+  .tab-image {
+    width:45%;
     height: auto;
+    flex-shrink: 0;
   }
   
+  button i {
+    font-size: 1.5rem;
+  }
   
+  @media (max-width: 768px) {
+    .mission-container {
+      flex-direction: column;
+    }
+  
+    .tab-buttons {
+      width: 100%; /* Adjust buttons to full width on smaller screens */
+      flex-direction: row; /* Stack horizontally on small screens */
+      justify-content: space-around;
+    }
+  }
   
