@@ -17,7 +17,8 @@ import afterschool from '../assets/afterschool.jpg';
 const Activities = () => {
   return (
     <div className="activities">
-      <h1>Activities and Services</h1>
+      <br />
+      <center><h1>Activities and Services</h1></center>
       
       <section className="programs">
         <h2>Educational Programs</h2>

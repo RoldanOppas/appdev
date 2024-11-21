@@ -43,7 +43,8 @@ const Contacts = () => {
 
   return (
     <div className="contacts">
-      <h1>Contact Us</h1>
+      <br />
+      <center><h1>Contact Us</h1></center>
       {/*<p>We'd love to hear from you! Whether you have questions, feedback, or need more information about our services and programs, our team is here to assist you.</p>*/}
 
       <div className="contacts-container">
