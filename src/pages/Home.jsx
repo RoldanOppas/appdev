@@ -19,10 +19,7 @@ const Home = () => {
   return (
 
     <div className="home">
-      {/*<section className="hero">
-        <h1>Welcome to Pines Montessori School</h1>
-        <p className="location">#32 Gibraltar, Baguio City</p>
-      </section>*/}
+      
 
       <div className="cover-container">
         <img src={cover} alt="Cover" className="cover-photo" />
@@ -48,88 +45,102 @@ const Home = () => {
   
     <hr />
     <div className="mission-statement">
-      <center><h2>Mission Statement</h2></center>
-      {/* Tab Buttons */}
-      <div className="tab-buttons">
-        <button 
-          className={activeTab === "tab1" ? "active" : ""} 
-          onClick={() => setActiveTab("tab1")}
-        >
-          <i className="bi bi-eye-fill custom-icon"></i>
-          <br />
-          Vision
-        </button>
-        <button 
-          className={activeTab === "tab2" ? "active" : ""} 
-          onClick={() => setActiveTab("tab2")}
-        >
-          <i class="bi bi-crosshair"></i>
-          <br />
-          Mission
-        </button>
-        <button 
-          className={activeTab === "tab3" ? "active" : ""} 
-          onClick={() => setActiveTab("tab3")}
-        >
-          <i class="bi bi-card-checklist"></i>
-          <br />
-          Goal and Objectives
-        </button>
-        <button 
-          className={activeTab === "tab4" ? "active" : ""} 
-          onClick={() => setActiveTab("tab4")}
-        >
-          <i class="bi bi-feather"></i>
-          <br />
-          Philosophy
-        </button>
-      </div>
+  <div className="mission-container">
+    {/* Tab Buttons */}
+    <div className="tab-buttons">
+      <button
+        className={activeTab === "tab1" ? "active" : ""}
+        onClick={() => setActiveTab("tab1")}
+      >
+        <i className="bi bi-eye-fill custom-icon"></i>
+        <br />
+        Vision
+      </button>
+      <button
+        className={activeTab === "tab2" ? "active" : ""}
+        onClick={() => setActiveTab("tab2")}
+      >
+        <i className="bi bi-crosshair"></i>
+        <br />
+        Mission
+      </button>
+      <button
+        className={activeTab === "tab3" ? "active" : ""}
+        onClick={() => setActiveTab("tab3")}
+      >
+        <i className="bi bi-card-checklist"></i>
+        <br />
+        Goal and Objectives
+      </button>
+      <button
+        className={activeTab === "tab4" ? "active" : ""}
+        onClick={() => setActiveTab("tab4")}
+      >
+        <i className="bi bi-feather"></i>
+        <br />
+        Philosophy
+      </button>
+    </div>
 
-      {/* Content Area */}
-      <div className="tab-content">
-        {activeTab === "tab1" && <div >
+    {/* Content Area */}
+    <div className="tab-content">
+      {activeTab === "tab1" && (
+        <div>
           <section className="background">
-            <div className="background-content">
+            <div className="tab-background-content">
+              
               <img src={pic1} alt="School Building" className="tab-image" />
               <p>
-                An outstanding progressive school dedicated to providing balanced quality education through innovative learning principles and methodology, that all students are prepared and motivated to perform with their highest potential, productive in all areas, molded and primed in the changing of time, and confident to belong in a diverse community and global society.
+                
+            <h2>Vision</h2>
+              An outstanding progressive school dedicated to providing balanced quality education through innovative learning principles and methodology, that all students are prepared and motivated to perform with their highest potential, productive in all areas, molded and primed in the changing of time, and confident to belong in a diverse community and global society.
               </p>
             </div>
           </section>
-         </div>}
-        {activeTab === "tab2" && <div>
+        </div>
+      )}
+      {activeTab === "tab2" && (
+        <div>
           <section className="background">
-            <div className="background-content">
+            <div className="tab-background-content">
+              
               <img src={pic2} alt="School Building" className="tab-image" />
               <p>
+                <h2>Mission</h2>
               A devoted school committed to developing and training every student in their God-given talents and potentials, through values and quality learning, enhancing their knowledge and wisdom, guided and cultivated through the fundamentals of this institution, faith, hope, love, and respect, to scaffold their social growth, that every student is committed, competent, confident, able to communicate, capable for advancement, and inspiring them of their bright and better future.
               </p>
             </div>
           </section>
-        </div>}
-        {activeTab === "tab3" && <div>
+        </div>
+      )}
+      {activeTab === "tab3" && (
+        <div>
           <section className="background">
-            <div className="background-content">
+            <div className="tab-background-content">
               <img src={pic3} alt="School Building" className="tab-image" />
               <p>
-              That all students may have a positive and memorable learning experience, achieved academic excellence, be equipped, and be able to demonstrate their talents and skills, display exemplary performance in all areas of improvement, with good values, good manners, and right conduct, prepared, and are commendable for their next level of education.
-              </p>
+                <h2>Goals and Objectives</h2>
+              That all students may have a positive and memorable learning experience, achieved academic excellence, be equipped, and be able to demonstrate their talents and skills, display exemplary performance in all areas of improvement, with good values, good manners, and right conduct, prepared, and are commendable for their next level of education.              </p>
             </div>
           </section>
-          </div>}
-        {activeTab === "tab4" && <div>
+        </div>
+      )}
+      {activeTab === "tab4" && (
+        <div>
           <section className="background">
-            <div className="background-content">
+            <div className="tab-background-content">
               <img src={pic4} alt="School Building" className="tab-image" />
               <p>
-              Pines Montessori School aims to ensure that the vision, mission, and core values are the cornerstones of all the school programs, activities, and practices. Its principles are reflected in all the teaching and learning processes, that is applied both internally and externally. Regular evaluation is an important part that motivates and develops all performances toward our goal and every progress, that meets the standards and high expectations of all, where learning is a continuous process in life.
-              </p>
+                <h2>Philosophy</h2>
+              Pines Montessori School aims to ensure that the vision, mission, and core values are the cornerstones of all the school programs, activities, and practices. Its principles are reflected in all the teaching and learning processes, that is applied both internally and externally. Regular evaluation is an important part that motivates and develops all performances toward our goal and every progress, that meets the standards and high expectations of all, where learning is a continuous process in life.              </p>
             </div>
           </section>
-        </div>}
-
-      </div>
+        </div>
+      )}
     </div>
+  </div>
+</div>
+
           <hr />
       <br />
       <br />
