@@ -68,8 +68,8 @@
   flex-direction: row;
   width: 100%; 
   box-sizing: border-box; 
-  padding-top: 170px; /* Adjust this value based on your header height */
-  margin-top: -170px; /* Negative margin to counteract the padding */
+  padding-top: 170px;
+  margin-top: -170px;
 }
 
 .program-image {
