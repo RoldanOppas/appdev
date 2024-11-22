@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/Activities.css';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -12,8 +12,31 @@ import homeschool from '../assets/homeschool.jpg';
 import tutor from '../assets/tutor.jpg';
 import counsel from '../assets/counseling.jpg';
 import afterschool from '../assets/afterschool.jpg';
+import Calendar from '../pages/Calendar';
 
 const Activities = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener on unmount
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="activities">
       <h1>Activities and Services</h1>
@@ -213,79 +236,12 @@ const Activities = () => {
       </section>
 
       <section className="calendar">
-        <h2>School Calendar</h2>
-        <div className="calendar-container">
-          <p>Stay updated with our school events, activities, holidays, and important dates.</p>
-          <div className="calendar-grid">
-            <table className="calendar-table">
-              <thead>
-                <th><h2>November 2024</h2></th>
-                <tr>
-                  <th>Mon</th>
-                  <th>Tue</th>
-                  <th>Wed</th>
-                  <th>Thu</th>
-                  <th>Fri</th>
-                  <th>Sat</th>
-                  <th>Sun</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>6</td>
-                  <td>7</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>9</td>
-                  <td>10</td>
-                  <td>11 <span className="event">Holiday</span></td>
-                  <td>12</td>
-                  <td>13</td>
-                  <td>14</td>
-                </tr>
-                <tr>
-                  <td>15</td>
-                  <td>16</td>
-                  <td>17</td>
-                  <td>18</td>
-                  <td>19</td>
-                  <td>20</td>
-                  <td>21</td>
-                </tr>
-                <tr>
-                  <td>22</td>
-                  <td>23</td>
-                  <td>24</td>
-                  <td>25 <span className="event">Field Trip</span></td>
-                  <td>26</td>
-                  <td>27</td>
-                  <td>28</td>
-                </tr>
-                <tr>
-                  <td>29 <span className="event">Parent Meeting</span></td>
-                  <td>30</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <Calendar />
       </section>
 
       <section className="services">
         <h2>Available Services</h2>
         <div className="services-grid">
-          {/* Service Card 1: Tutoring */}
           <div className="service-card">
             <img src={tutor} alt="Tutoring" className="service-img" />
             <div className="service-content">
@@ -294,7 +250,6 @@ const Activities = () => {
             </div>
           </div>
 
-          {/* Service Card 2: Counseling */}
           <div className="service-card">
             <img src={counsel} alt="Counseling" className="service-img" />
             <div className="service-content">
@@ -303,7 +258,6 @@ const Activities = () => {
             </div>
           </div>
 
-          {/* Service Card 3: After-School Care */}
           <div className="service-card">
             <img src={afterschool} alt="After-School Care" className="service-img" />
             <div className="service-content">
@@ -313,6 +267,17 @@ const Activities = () => {
           </div>
         </div>
       </section>
+
+      {showButton && (
+        <div className="back-to-top-wrapper">
+          <button onClick={scrollToTop} className="back-to-top">
+            ↑ {/* Arrow symbol */}
+          </button>
+          <span className="back-to-top-tooltip">Back to Top</span>
+        </div>
+      )}
+
+
     </div>
   );
 };

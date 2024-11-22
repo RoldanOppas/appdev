@@ -1,0 +1,21 @@
+[
+    {
+      "date": "2024-11-01",
+      "title": "All Saints' Day",
+      "type": "holiday",
+      "description": "A day to honor all the saints."
+    },
+    {
+      "date": "2024-11-02",
+      "title": "School Festival",
+      "type": "activity",
+      "description": "Annual school festival with various activities."
+    },
+    {
+      "date": "2024-12-25",
+      "title": "Christmas Day",
+      "type": "holiday",
+      "description": "Christmas celebration."
+    }
+  ]
+  
