@@ -11,8 +11,9 @@ const EventCalendar = () => {
     setEvents(eventsData);
   }, []);
 
+  // Filter events for a given date
   const renderEvents = (date) => {
-    const dateStr = date.toISOString().split('T')[0]; 
+    const dateStr = date.toISOString().split('T')[0];  
     const dayEvents = events.filter(event => event.date === dateStr);
     
     return dayEvents.map(event => (
@@ -26,20 +27,27 @@ const EventCalendar = () => {
     ));
   };
 
-
   const handleDateChange = (event) => {
     const selectedDate = new Date(event.target.value);
     setCurrentDate(selectedDate);
     setSelectedDate(selectedDate);
   };
 
-  // Handle day click
   const handleDayClick = (date) => {
     setSelectedDate(date);
     setCurrentDate(date);
   };
 
-  // Render the calendar grid
+  const handlePrevMonth = () => {
+    const prevMonth = new Date(currentDate.setMonth(currentDate.getMonth() - 1));
+    setCurrentDate(prevMonth);
+  };
+
+  const handleNextMonth = () => {
+    const nextMonth = new Date(currentDate.setMonth(currentDate.getMonth() + 1));
+    setCurrentDate(nextMonth);
+  };
+
   const renderCalendar = () => {
     const startOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
     const endOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
@@ -66,38 +74,44 @@ const EventCalendar = () => {
 
   return (
     <div className="calendar-container">
-      <div><h2 className="calendar_h2">School Calendar</h2></div>
-      <div className="calendar-nav">
-        <input
-          type="date"
-          value={currentDate.toISOString().split('T')[0]} 
-          onChange={handleDateChange}
-        />
-        <span className="month-year">
-          {currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
-        </span>
-      </div>
-      <div className="calendar-header">
-        <div>Sun</div>
-        <div>Mon</div>
-        <div>Tue</div>
-        <div>Wed</div>
-        <div>Thu</div>
-        <div>Fri</div>
-        <div>Sat</div>
-      </div>
-      <div className="calendar-grid">
-        {renderCalendar()}
-      </div>
-      <div className="calendar-legend">
-        <div className="legend-item">
-          <span className="legend-color holiday"></span>Holiday
+      <h2 className="calendar_h2">School Calendar</h2>
+      <div className="calendar-layout">
+        <div className="calendar-legend">
+          <div className="legend-item">
+            <span className="legend-color holiday"></span>Holiday
+          </div>
+          <div className="legend-item">
+            <span className="legend-color activity"></span>Activity
+          </div>
+          <div className="legend-item">
+            <span className="legend-color meeting"></span>Meeting
+          </div>
         </div>
-        <div className="legend-item">
-          <span className="legend-color activity"></span>Activity
-        </div>
-        <div className="legend-item">
-          <span className="legend-color meeting"></span>Meeting
+        <div className="calendar-main">
+          <div className="calendar-nav">
+            <button onClick={handlePrevMonth} data-tooltip="Previous Month">&lt;</button> 
+            <span className="month-year">
+              {currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+            </span>
+            <button onClick={handleNextMonth} data-tooltip="Next Month">&gt;</button>
+            <input
+              type="date"
+              value={currentDate.toISOString().split('T')[0]} 
+              onChange={handleDateChange}
+            />
+          </div>
+          <div className="calendar-header">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div className="calendar-grid">
+            {renderCalendar()}
+          </div>
         </div>
       </div>
     </div>
